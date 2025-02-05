@@ -2428,8 +2428,9 @@ Configuration Flags
 
     By default, Cabal will first try to satisfy dependencies with the
     default flag value and then, if that is not possible, with the
-    negated value. However, if the flag is manual, then the default
-    value (which can be overridden by commandline flags) will be used.
+    negated value. If the manual flag is ``True``, however, Cabal will
+    **not** try the negated value. Only the default value will be tried
+    (unless this has been overridden by commandline flags).
 
 Conditional Blocks
 ^^^^^^^^^^^^^^^^^^
